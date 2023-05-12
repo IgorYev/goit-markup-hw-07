@@ -439,11 +439,12 @@ body {
   text-transform: capitalize;
   color: var(--background-color);
   text-align: center;
-  max-width: 496px;
+  max-width: 320px;
 }
 
 @media screen and (min-width: 768px) {
   .title {
+    max-width: 496px;
     margin: 0 auto 36px;
     font-size: 56px;
     line-height: 1.07;
@@ -539,9 +540,10 @@ img {
     flex-basis: calc((100% - 24px) / 2);
 }
 }
+
 @media screen and (min-width: 1158px){
 .content-list-item {
-    width: calc((100% - 3 * 24px) / 6);
+  flex-basis: calc((100% - 3 * 24px) / 4);
   }
   }
 
@@ -549,16 +551,20 @@ img {
   font-family: 'Roboto', sans-serif;
   color: var(--tittle-text-color);
   margin-bottom: 8px;
-
+  text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  text-align: center;
   letter-spacing: 0.02em;
 }
+@media only screen and (min-width: 768px){
+  .content {
+      text-align: left;
+  }
+  }
 @media only screen and (min-width: 1158px) {
   .content {
     font-weight: 500;
@@ -784,7 +790,8 @@ img {
 .containers-cust{
 }
 .customers-list {
-  width: calc((100% - 120px) / 2);
+  /* width: calc((100% - 120px) / 2); */
+  width: 190px;
   height: 88px;
 }
 @media only screen and (min-width: 768px){
@@ -870,6 +877,11 @@ img {
 .footer-icons-list {
   display: flex;
   gap: 16px;
+  padding-inline-start: 0px;
+}
+.footer-icons-list-mobile{
+  display: flex;
+  gap: 56px;
   padding-inline-start: 0px;
 }
 .footer-icons-link {
@@ -1134,8 +1146,8 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) rotate(0) scale(1);
   padding: 72px 24px 24px;
-  width: 408px;
-  min-height: 576px;
+  min-width: 320px;
+  min-height: 320px;
 
   border-radius: 4px;
   background-color: var(--modal);
@@ -1145,7 +1157,12 @@ img {
    opacity: 1;
     transition: transform var(--animo);
 }
-
+@media only screen and (min-width: 468px){
+  .modal{
+    width: 408px;
+    min-height: 576px;
+  }
+  }
 .modal-btn {
   position: absolute;
   display: flex;
@@ -1376,6 +1393,11 @@ input[type='checkbox']:checked
   letter-spacing: 0.02em;
   color: var(--background-color);
 }
+@media only screen and (min-width: 767px){
+.subscribe-title{
+ justify-content: left;
+}
+}
 .subcribe-button {
   display: flex;
   align-items: center;
@@ -1419,6 +1441,9 @@ input[type='checkbox']:checked
   }
   .footer-social {
     text-align: center;
+  }
+  .subscribe-title{
+    text-align: right;
   }
   .footer-cont {
     margin-right: auto;
@@ -1497,9 +1522,9 @@ input[type='checkbox']:checked
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  color: #fff;
+  top: 24px;
+  right: 24px;
+  color: var(--background-color);
 }
 
 .mobile-menu {
@@ -1510,7 +1535,7 @@ input[type='checkbox']:checked
   
 }
 .mobile-li{
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   
 }
 .mobile-menu .link {

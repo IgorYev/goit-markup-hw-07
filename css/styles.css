@@ -1157,7 +1157,7 @@ img {
    opacity: 1;
     transition: transform var(--animo);
 }
-@media only screen and (min-width: 468px){
+@media only screen and (min-width: 428px){
   .modal{
     width: 408px;
     min-height: 576px;
